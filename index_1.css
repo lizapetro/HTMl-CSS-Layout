@@ -1,0 +1,312 @@
+body{
+  font-family: 'PT Sans', sans-serif;
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+section.about_me{
+  margin-top: 0;
+  display:flex;
+  flex-wrap: wrap;
+  margin-right: 0;
+  width:65%;
+}
+section.about_me img,
+section.about_me div{
+  align-self: flex-start;
+}
+section.about_me div{
+  margin-left: 20px;
+  margin-right: 40px;
+  width:60%;
+}
+section.my_experience{
+  margin-top: 0;
+}
+section.my_experience ul span.company{
+  color: #3d9ccc;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  z-index: -8;
+}
+section.my_experience ul span.specialty{
+  font-size: 16px;
+}
+section.my_experience ul span.data{
+  font-size: 12px;
+}
+section.my_experience ul li{
+  position: relative;
+  z-index: 8;
+  padding-bottom: 20px;
+}
+section.my_experience ul li:last-child span.company{
+  color:#96c93c;
+}
+section.my_experience ul li::after{
+  content:"";
+  display: inline-block;
+  position: absolute;
+  width:8px;
+  height:8px;
+  border-radius: 50%;
+  background-color:#3d9ccc;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 3px #dce2e6;
+  top:7px;
+  left:-22px;
+  z-index: -10;
+}
+section.my_experience ul li:last-child::after{
+  background-color: #96c93c;
+}
+section.my_experience ul li:not(:last-child):not(:nth-last-child(2)):not(:first-child)::before
+{
+  content:"";
+  display:inline-block;
+  height: 100%;
+  position: absolute;
+  border-left:2px solid #3d9ccc;
+  left:-19px;
+  top:3px;
+  z-index: 10;
+  box-shadow: 1px 13px 0 0 white,
+              2px 13px 0 0 #dce2e6,
+              -1px 13px 0 0 white,
+              -2px 13px 0 0 #dce2e6;
+}
+section.my_experience ul li:first-of-type::before{
+  content:"";
+  display:inline-block;
+  height: 100%;
+  position: absolute;
+  border-left:2px solid #3d9ccc;
+  left:-19px;
+  top:7px;
+  z-index: 10;
+  box-shadow: 1px 10px 0 0 white,
+              2px 10px 0 0 #dce2e6,
+              -1px 10px 0 0 white,
+              -2px 10px 0 0 #dce2e6;
+}
+section.my_experience ul li:nth-last-child(2)::before{
+  content:"";
+  display:inline-block;
+  height: 5px;
+  position: absolute;
+  border-left:2px solid #3d9ccc;
+  left:-19px;
+  top:3px;
+}
+section.my_experience ul li span{
+  display: block;
+  padding-bottom: 5px;
+}
+section,
+aside.activity{
+  font-size: 14px;
+  color:rgb(113,127,149);
+}
+section h3,
+aside.activity,
+section.my_experience span.data{
+  text-transform: uppercase;
+  font-weight: normal;
+}
+section h3{
+  font-size: 20px;
+  color:rgb(81,94,114);
+}
+aside.activity h3{
+  font-size: 11px;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+header ul.contact{
+  margin-left: 20px;
+}
+header ul.contact li{
+  margin-top: 20px;
+}
+header ul.contact li a{
+  color:rgb(61,156,204);
+  text-decoration: none;
+  position: relative;
+}
+header ul.contact li a::before{
+  content:"";
+  width:27px;
+  height:27px;
+  position: absolute;
+  background:url(sprite.png);
+  bottom:0;
+  left:-35px;
+}
+header ul.contact li a.anchor::before{
+}
+header ul.contact li a.facebook::before{
+  background-position: -70px 0px;
+}
+header ul.contact li a.twitter::before{
+  background-position: -182px 0px;
+}
+header ul.contact li a.dribble::before{
+  background-position: -38px 0px;
+}
+header ul.contact li a.revision::before{
+  background-position: -102px 4px;
+}
+section.latest_project ul,
+section.interests ul,
+section.my_skill ul
+{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+section.latest_project ul li,
+section.interests ul li{
+  margin-top:50px;
+  margin:auto;
+}
+section.latest_project ul li p,
+section.latest_project ul li span,
+section.latest_project ul li img,
+section.interests ul li span,
+section.interests ul li img,
+section.my_skill ul li span,
+footer span,
+footer img{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+section.latest_project ul li img,
+footer img{
+  margin-right: auto;
+  margin-left: auto;
+}
+section,footer{
+  margin-top: 70px;
+}
+section.instruments{
+  display: inline-block;
+  width:53%;
+}
+section.instruments ul li{
+  display: block;
+  width:100%;
+  background-color:#eff2f5;
+  margin-top: 12px;
+  color:white;
+  height: 30px;
+  border-radius: 8px;
+  position: relative;
+}
+section.instruments ul li::before{
+  font-size: 12px;
+  display: block;
+  position: absolute;
+  text-transform: uppercase;
+  height: 23px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-top: 7px;
+}
+section.instruments ul li.photoshop::before{
+  content:"photoshop";
+  width: 85%;
+  background-color: #1ba0e1;
+
+}
+section.instruments ul li.illustrator::before{
+  content:"illustrator";
+  width: 65%;
+  background-color: #8cbf26;
+}
+section.instruments ul li.indesign::before{
+  content:"indesign";
+  width:40%;
+  background-color: #b664e6;
+}
+section.instruments ul li.sketch::before{
+  content:"sketch";
+  width: 13%;
+  background-color: #25b9b8;
+}
+section.instruments ul li.axure::before{
+  content:"axure";
+  width: 47%;
+  background-color: #f09709;
+}
+aside.activity{
+  width:46%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+aside.activity ul{
+  margin-top: 8px;
+  margin-left: 20px;
+  border:1px solid #e7e7e9;
+  padding-top: 13px;
+  padding-left: 15px;
+}
+aside.activity ul li{
+  text-transform: none;
+  margin-bottom: 15px;
+  color:#9b9a9a;
+  font-size: 12px;
+}
+aside h3,
+aside.activity ul li time{
+  font-weight: normal;
+  color:#97a1b1;
+  text-transform: uppercase;
+  margin-right: 15px;
+
+}
+aside h3{
+  text-align: right;
+  margin-bottom: 0;
+}
+aside.activity ul li time{
+  float: right;
+}
+section.my_skill ul.my_knowledge{
+  list-style: initial;
+  margin-top: 50px;
+}
+footer span{
+  font-size: 18px;
+  font-family: "DroidSerif";
+  color: rgb(65, 65, 65);
+  font-style: italic;
+}
+@media (min-width:320px) and (max-width:740px){
+  section.about_me{
+    width:100%;
+  }
+  aside.activity{
+    width:100%;
+  }
+  section.instruments{
+    width: 100%;
+  }
+  section.instruments ul li.photoshop::before,
+  section.instruments ul li.illustrator::before,
+  section.instruments ul li.indesign::before,
+  section.instruments ul li.sketch::before,
+  section.instruments ul li.axure::before{
+    color:rgb(65, 65, 65);
+    width: 100%;
+  }
+}
